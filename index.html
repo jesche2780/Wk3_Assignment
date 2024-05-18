@@ -4,47 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Corporation, Inc.</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">  
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"> 
+    <!--Link added to connect the bootstrap repository to the HTML document-->
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/Wk3_Assignment/index.html">Big Corporation, Inc.</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="/Wk3_Assignment/history.html">History <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link active" href="/Wk3_Assignment/purchases.html">Purchases</a>
-          <a class="nav-item nav-link active" href="/Wk3_Assignment/future_projects.html">Future Projects</a>
+    <div  id="main-container" class="container pt-2 pb-5 bg-light">
+      <!--Created main-container ID along with a class of container with padding on the top of 2 and on the bottom of 5, with a background color of "light" -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/Wk3_Assignment/index.html">Big Corporation, Inc.</a>
+        <!--Added a navbar using the navbar-expland-lg layout to keep it as a navbar until the size changes to "large", where it will show the navbar toggler button, with a color of dark and dark layout-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--Added a button for the dropdown which occurs when the windows is small-->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/Wk3_Assignment/history.html">History</a>
+            </li>
+          </ul>
+          <!--Added a link for the "history" of the big company, which is included in the folder. The link will move the user to the history. It also has the "index.html" document integrated into the navbar so that it can be clicked and returned to the "home" page.-->
+        </div>
+      </nav>
+      <div class="container border border-dark">
+        <div class="row">
+          <div class="col-lg-6 border border-dark">
+            <!--Using the correct Bootstrap grip layout, I have created a new container with a black border, with a row which contains a column, which is sized to 6 (half the page), and collapses at a large window size, it also has a black border.-->
+            <img src="https://cheesemaking.com/cdn/shop/products/curde_hero.jpg?v=1529434186&width=2048" width="300" alt="Cheese curds on a wooden tabletop">
+          </div>
+          <div class="col-sm-6 border border-dark">
+            Our high-quality famous cheese curds sold by the bulk in 3 lb. increments. Shipped in frozen capacity to arrive at your house cold. <br>
+            <!--Similar to above, except this column will collapse when the window size is small.-->
+            <form>
+              <div class="form-group">
+                <label for="quantity1"> <h3>Quantity:</h3></label><br>
+                <input type="quantity" class="form-control" name="quantity1" id="Quantity">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>  
+            <!--Created a form so that the user can input the quantity of product they want and hit sumbit, this will save the quantity as "quantity1" as a variable to use later.-->
+          </div>
         </div>
       </div>
-    </nav>
-    <div class="container border border-dark">
-      <div class="row">
-        <div class="col-lg-3 border border-dark">
-          Content
-        </div>
-        <div class="col-sm-3 border border-dark">
-          Content
-        </div>
-        <div class="col-lg-3 border border-dark">
-          Content
+      <div class="container border border-dark">
+        <div class="row">
+          <div class="col-lg-6 border border-dark">
+            <img src="https://littlespoonfarm.com/wp-content/uploads/2023/01/homemade-raw-yogurt-recipe.jpg" width="300" alt="Yogurt stirred in a bowl">
+          </div>
+          <div class="col-sm-6 border border-dark">
+            Our in-house curated, stirred, and refridgerated greek yogurt. Available in vanilla, ships in 3 lb. increments. Shipped in frozen capacity to arrive at your house cold. <br>
+            <form>
+              <div class="form-group">
+                <label for="quantity2"> <h3>Quantity:</h3></label>
+                <input type="quantity" class="form-control" name="quantity2" id="Quantity">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>  
+            </form>  
+          </div>
         </div>
       </div>
+      <footer class="text-center">Big Corporation, Inc. ©2024</footer>     
+      <!--Footer added to show who the site belongs to at the bottom of the page.--> 
     </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm border border-dark">
-          Content
-        </div>
-        <div class="col-sm border border-dark">
-          Content
-        </div>
-        <div class="col-sm border border-dark">
-          Content
-        </div>
-      </div>
-    </div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+      <!--Added the jquery module to allow the dropdown in the navbar to be functional.-->
   </body>
 </html>
